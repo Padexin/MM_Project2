@@ -3,6 +3,7 @@
 This is the README file for our second Math Modeling project. It's on the subject of the population of scrub lizards native to Florida; we are meant to model said population. 
 
 10/25/2020 -- Chris
+
 I will probably start with the discrete logistical model; I think this would be helpful because we can later make the carrying capacity C dependent on our research into scrub lizards. So we are looking at the equation
 
 X(n+1) = X(n) + kX(n)(C - X(n))
