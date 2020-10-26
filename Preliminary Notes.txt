@@ -28,7 +28,7 @@ d1 = (92 - 11)/92 * 100% = 91.9%
 d2 = (11 - 2)/11 * 100% = 81.8%
 d3 = 100%
 
-Post-Model Note: These death rates were too high, and killed off the population too fast for them to successfully reproduce; I subtracted 0.2 from each of them. I attempted to use some sort of formula to introduce the carrying capacity into the death rates, but it made things weird (refer to "carrying.png")
+Post-Model Note: These death rates were too high, and killed off the population too fast for them to successfully reproduce; I subtracted 0.2 from each of them. See "shrinking.png" and "growing.png" to see before and after I did this subtraction. I attempted to use some sort of formula to introduce the carrying capacity into the death rates, but it made things weird (refer to "carrying.png")
 
 
 Problems with this currently:
