@@ -27,6 +27,7 @@ data2 = [ 11.31,  4.80,  5.6, 0.12, 0.06,  58;
          278.26, 84.32, 11.0, 0.19, 0.15, 115];
      
 totals = data2(:,1).*data2(:,6); %total populations in each patch = size*density
+%IMPORTANT: I assumed that these totals were (close enough to) the carrying capacity of the patch
 
 
 %We find the betas for F_a, S_j, S_a, and C via linear regression
