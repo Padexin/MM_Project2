@@ -36,12 +36,18 @@ figure()
 scatter(data2(:,1) + data2(:,2), data2(:,4))
 figure()
 scatter(data2(:,1) + data2(:,2), data2(:,5))
+
+%The above 3 plots show a logarithmic relationship as far as I can tell
+
 figure()
 scatter(data2(:,1) + data2(:,2), totals)
-% beta_F = data2(:,3)\[ones(8,1),data2(:,1:2)]; 
+%This one looks linear
+
+% beta_F = data2(:,3)\[ones(8,1),data2(:,1:2)]; %These three need to be fixed to reflect logarithmic relationship
 % beta_S_j = data2(:,4)\[ones(8,1),data2(:,1:2)];
 % beta_S_a = data2(:,5)\[ones(8,1),data2(:,1:2)];
-% beta_C = totals\[ones(8,1),data2(:,1:2)];
+
+beta_C = totals\[ones(8,1),data2(:,1:2)];
 
 
 %%Next we will look at migration between patches. Specifically, we will
@@ -52,3 +58,4 @@ data3 = [ 50, 0.42;
          250, 0.02;
          300, 0.00;
          350, 0.01];
+%Currently working on this
