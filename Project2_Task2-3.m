@@ -39,10 +39,22 @@ figure()
 scatter(data2(:,1) + data2(:,2), data2(:,5))
 
 %The above 3 plots show a logarithmic relationship as far as I can tell
+%Since the variables F_a, S_j and S_a seem to have logarithmic relationships, using logarithmic regression should provide decent models for them based on patch size.
+X = [ones(8,1) data2(:,1:2)]
+%predicting F_a: function is F_a = beta(2)*log(Patch Size) + beta(3)*log(Sandy Habitat) (since beta(1)=0)
+y = data2(:,3)
+beta_F = log(X)\y
+%predicting S_j: function is S_j = beta(2)*log(Patch Size) + beta(3)*log(Sandy Habitat) (since beta(1)=0)
+y = data2(:,4)
+beta_S_j = log(X)\y
+%predicting S_a: function is S_a = beta(2)*log(Patch Size) + beta(3)*log(Sandy Habitat) (since beta(1)=0)
+y = data2(:,5)
+beta_S_a = log(X)\y
 
 figure()
 scatter(data2(:,1) + data2(:,2), totals)
 %This one looks linear
+
 
 % beta_F = data2(:,3)\[ones(8,1),data2(:,1:2)]; %These three need to be fixed to reflect logarithmic relationship
 % beta_S_j = data2(:,4)\[ones(8,1),data2(:,1:2)];
