@@ -27,9 +27,13 @@ pmigrate = [0.1, 0, 0, 0];
 %This is garbage, probably due to the large size of X compared with the output.
 
 %Transitioning the data to X/750, because that was the given maximum distance lizards migrated
-X = [ones(7,1) exp(-1.*(data3(:,1)./750))];
-y = [data3(:,2)];
-beta = X\y;
+%     THIS IS THE FINAL MODEL I UTILIZED, it is still wrong
+% I made a false assumption that the data given was not a histogram, which lead to a model that works, but isn't an accurate depiction of anything
+% I could create a probability density function that would tell me the probability of a lizard migrating a given distance, which would be more useful
+% But said probability function would still not answer the question
+%X = [ones(7,1) exp(-1.*(data3(:,1)./750))];
+%y = [data3(:,2)];
+%beta = X\y;
 
 %The above seems to work well, but breaks down at about X=300
 %modifying the data slightly to see if I can fix that
